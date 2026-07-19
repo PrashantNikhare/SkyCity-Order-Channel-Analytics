@@ -31,6 +31,25 @@ df = pd.read_csv("restaurants.csv")
 
 st.sidebar.header("Filters")
 
+
+subregion = st.sidebar.multiselect(
+    "Subregion",
+    df["Subregion"].unique(),
+    default=df["Subregion"].unique()
+)
+
+cuisine = st.sidebar.multiselect(
+    "Cuisine",
+    df["CuisineType"].unique(),
+    default=df["CuisineType"].unique()
+)
+
+segment = st.sidebar.multiselect(
+    "Segment",
+    df["Segment"].unique(),
+    default=df["Segment"].unique()
+)
+
 st.sidebar.markdown("---")
 
 st.sidebar.info("""
@@ -51,23 +70,6 @@ Developed using:
 • Streamlit
 """)
 
-subregion = st.sidebar.multiselect(
-    "Subregion",
-    df["Subregion"].unique(),
-    default=df["Subregion"].unique()
-)
-
-cuisine = st.sidebar.multiselect(
-    "Cuisine",
-    df["CuisineType"].unique(),
-    default=df["CuisineType"].unique()
-)
-
-segment = st.sidebar.multiselect(
-    "Segment",
-    df["Segment"].unique(),
-    default=df["Segment"].unique()
-)
 
 # =====================================
 # Apply Filters
