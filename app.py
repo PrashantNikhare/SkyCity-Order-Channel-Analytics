@@ -18,6 +18,9 @@ st.set_page_config(
 
 st.title("🍽️ SkyCity Auckland Restaurants & Bars")
 st.write("Order Channel Performance and Market Share Analytics")
+st.success(
+    "Interactive dashboard for analyzing restaurant order channels, market share and dependency risk."
+)
 
 # =====================================
 # Read Dataset
