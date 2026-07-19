@@ -31,6 +31,26 @@ df = pd.read_csv("restaurants.csv")
 
 st.sidebar.header("Filters")
 
+st.sidebar.markdown("---")
+
+st.sidebar.info("""
+### About
+
+SkyCity Auckland Restaurants & Bars
+
+Order Channel Performance Dashboard
+
+Developed using:
+
+• Python
+
+• Pandas
+
+• Plotly
+
+• Streamlit
+""")
+
 subregion = st.sidebar.multiselect(
     "Subregion",
     df["Subregion"].unique(),
